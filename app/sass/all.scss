@@ -20,7 +20,8 @@ body{
 	width: 100%;
 	min-height: 100vh;
 	padding-left: 350px;
-	@include media-breakpoint-down(lg){
+	padding-left: 330px;
+	@include media-breakpoint-down(lg) {
 		padding-left: 0;
 	}
 }
@@ -45,8 +46,11 @@ body{
 		opacity: .9;
 	}
 }
-#content{
+#home{
 	min-height: 100vh;
+}
+#content{
+	// padding-left: 20px;
 }
 .home_slider{
 	height: 100vh;
@@ -268,4 +272,373 @@ body{
 		}
 	}
 
+}
+.breadcrumbs{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	li{
+		font-size: 14px;
+		line-height: 16px;
+		color: #000;
+		display: inline-block;
+		vertical-align: middle;
+		padding-right: 20px;
+		position: relative;
+		&:last-child{
+			padding-right: 0;
+			&:after{content: none;}
+		}
+		&:after{
+			content: "/";
+			position: absolute;
+			top: 0;
+			right: 6px;
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+		}
+		a{
+			text-decoration: underline;
+			color: #ae8640;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
+.article{
+	display: flex;
+
+	.article_info{
+		flex: 0 0 500px;
+		max-width: 500px;
+		background:url("../images/bg.jpg") no-repeat;
+		background-size: 500px 100%;
+		padding: 22px 24px 20px;
+		@media screen and (max-width: 500px) {
+			padding: 15px;
+		}
+	}
+	.article_prev{
+		flex: 1 1 100%;
+		min-width: 0;
+	}
+	h4{
+		margin: 24px 0;
+		font:17px/25px 'MyriadPro_Semibold';
+	}
+	@media screen and (max-width: 1400px) {
+		flex-wrap:wrap;
+		.article_prev{
+			order:-1;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+		.article_info{
+			flex: 0 0 100%;
+			max-width: 100%;
+			background-size: 100% 100%;
+		}
+	}
+}
+.article_title{
+	padding-top: 50px;
+	h1{
+		margin: 0;
+		font:50px/52px 'MyriadPro_Semibold';
+		padding-bottom: 60px;
+	}
+	h2{
+		margin: 0;
+		color: #129575;
+		font:45px/47px 'MyriadPro_Semibold';
+	}
+	h3{
+		margin: 20px 0 0 0;
+		color: #0c0c0c;
+		font:25px/27px 'MyriadPro_Semibold';
+	}
+}
+.info_js{
+	cursor: pointer;
+	vertical-align: top;
+}
+.plan{
+	margin-top: 38px;
+	border-top: 1px solid rgba(#663f2a,.22);
+	border-bottom: 1px solid rgba(#663f2a,.22);
+	padding: 20px 0;
+	display: flex;
+	margin-bottom: 24px;
+	.plan_l{
+		flex: 0 0 60%;
+		max-width: 60%;
+		padding-top: 15px;
+		padding-bottom: 8px;
+		border-right: 1px solid rgba(#663f2a,.22);
+	}
+	.plan_rw{
+		display: flex;
+		margin-bottom: 23px;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+		.plan_rw_left{
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+		.plan_rw_right{
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+	.plan_r{
+		flex: 0 0 40%;
+		max-width: 40%;
+		padding-top: 15px;
+		padding-bottom: 8px;
+	}
+	span{
+		display: block;
+		font-size: 13px;
+		line-height: 16px;
+		text-transform: uppercase;
+		color: #000;
+		padding-bottom: 7px;
+	}
+	strong{
+		display: inline-block;
+		color: #dab15b;
+		font:36px/37px 'Myriad_Pro_bold';
+		margin-bottom: 23px;
+		-webkit-text-fill-color: transparent;
+		background: -moz-linear-gradient(top, rgba(255,184,15,1) 0%, rgba(255,177,0,1) 4%, rgba(255,159,0,1) 26%, rgba(255,105,0,1) 74%, rgba(255,83,0,1) 100%);
+		background: -webkit-linear-gradient(top, rgba(255,184,15,1) 0%,rgba(255,177,0,1) 4%,rgba(255,159,0,1) 26%,rgba(255,105,0,1) 74%,rgba(255,83,0,1) 100%);
+		-webkit-background-clip: text;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+	@media screen and (max-width: 500px){
+		flex-wrap:wrap;
+		.plan_l,.plan_r{
+			flex: 0 0 100% !important;
+			max-width: 100% !important;
+			border: 0;
+		}
+		.plan_l{
+			border-bottom: 1px solid rgba(#663f2a,.22);
+		}
+	}
+}
+.label_box{
+	padding: 32px 0;
+	p{
+		margin: 0;
+		font-size: 16px;
+		line-height: 23px;
+		color: #000;
+		font-style: italic;
+	}
+}
+.download{
+	span{
+		padding-left: 20px;
+	}
+	a{
+		padding-top: 13px;
+		padding-bottom: 13px;
+	}
+	strong{
+		display: block;
+		font-size: 25px;
+		line-height: 26px;
+	}
+	b{
+		display: block;
+		color: rgba(#fff,.55);
+		font:italic 13px/14px 'Myriad_Pro';
+	}
+}
+.about_text_col{
+	padding: 83px 40px 50px 50px !important;
+	h2{
+		font:40px/43px 'Myriad_Pro_bold';
+		margin: 0;
+		padding-bottom: 50px;
+		padding-left: 20px;
+	}
+	.about_text{
+		border-left: 2px solid #fff;
+		padding-left: 46px;
+		p{
+			margin: 0 0 28px 0;
+			font-size: 17px;
+			line-height: 27px;
+		}
+	}
+	@media screen and (max-width: 1300px) {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		flex: 0 0 50%;
+		max-width: 50%;
+		.about_text{
+			border-left: 0 !important;
+			padding-left: 0;
+		}
+	}
+}
+.about_etc{
+	padding:15px 15px 15px 50px !important;
+	@media screen and (max-width: 1300px){
+		padding-left: 15px !important;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+@media screen and (max-width: 800px) {
+	.about_etc,.about_text_col{
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.about_text_col{
+		padding-bottom: 28px !important;
+	}
+	.about_etc{
+		padding-top: 30px !important;
+	}
+}
+.list_columns{
+	margin-top: 70px;
+
+	[class *= "col-"]{
+		padding-bottom: 25px;
+	}
+	h2{
+		margin: 0;
+		color: #191919;
+		padding-left: 33px;
+		padding-bottom: 68px;
+	}
+	.col_cstm{
+		@media screen and (max-width: 1500px) {
+			flex: 0 0 50%;
+			max-width: 50%;
+			@media screen and (max-width: 800px) {
+				max-width: 500px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-bottom: 0;
+			}
+		}
+	}
+	@media screen and (max-width: 800px){
+		padding: 15px !important;
+		> .row{
+			display: block;
+		}
+		h2{
+			padding-bottom: 48px;
+		}
+	}
+}
+.box_text{
+	padding-left: 90px;
+	position: relative;
+	padding-bottom: 35px;
+	> .icon{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	h3{
+		margin: 0;
+		font:24px/25px 'MyriadPro_Semibold';
+		padding-bottom: 23px;
+	}
+	ul{
+		font-size: 15px;
+		line-height: 17px;
+		color: #393939;
+		li{
+			padding-bottom: 5px;
+		}
+	}
+}
+.about_us{
+	border: 8px solid #eddaac;
+	h2{
+		margin-bottom: 40px;
+		color: #191919;
+	}
+	p{
+		margin: 0 0 20px 0;
+		font-size: 17px;
+		line-height: 26px;
+		color: #191919;
+	}
+}
+.about_us_holder{
+	@media screen and (max-width: 800px){
+		padding:0 15px 15px !important;
+		.about_us{
+			padding: 80px 15px 45px !important;
+			h2{text-align: center;}
+			.btn{
+				display: block;
+				padding-left: 10px !important;
+				padding-right: 10px !important;
+			}
+		}
+	}
+}
+#sync1{
+	position: relative;
+	.owl-nav{
+		position: absolute;
+		margin: 0;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 76px;
+		height: 56px;
+		background: #d6b168;
+		button{
+			width: 50%;
+			height: 100%;
+			margin: 0;
+			outline: none;
+			&:hover{
+				background: none !important;
+			}
+		}
+	}
+}
+#sync2{
+	background: #e0e0e0;
+	padding: 34px 40px;
+	.current{
+		.item{
+			position: relative;
+			&:after{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				content: '';
+				// background:red url("../images/kontur.svg") no-repeat ;
+				// background-size: cover;
+				border: 4px solid #ebbd5e;
+				// border-top: 0;
+			}
+		}
+	}
+	@media screen and (max-width: 1400px) {
+		background: none;
+		padding: 15px;
+	}
 }
