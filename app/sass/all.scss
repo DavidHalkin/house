@@ -642,3 +642,15 @@ body{
 		padding: 15px;
 	}
 }
+.big_prev{
+	min-height: 100vh;
+	background-size: cover !important;
+	background-position: 50% 50% !important;
+	position: relative;
+	@media screen and (max-width: 1400px)  {
+		min-height:calc(100vh - 118px);
+	}
+	@media screen and (max-width: 500px){
+		min-height:calc(100vh - 80px);
+	}
+}
