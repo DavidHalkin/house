@@ -410,3 +410,59 @@ body{
     }
   }
 }
+.func_box{
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  width: calc(100% - 100px);
+  &:after,&:before{
+    content: '';
+    clear: both;
+    display: table;
+  }
+  a:hover{
+    opacity: .7;
+  }
+  .go_down{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform:translateX(-50%);
+    border-radius: 50%;
+    display: block;
+    background:rgba(#d6b168,.7);
+    .icon{
+      top: 50%;
+      left: 50%;
+      transform:translate(-50% , -50%) rotate(90deg);
+      position: absolute;
+    }
+  }
+  .lnk_a{
+    background:#d6b168;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    color: #fff;
+    &.prv{
+      float: right;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+    *{
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+  @media screen and (max-width:600px) {
+    left: 15px;
+    bottom: 25px;
+    width: calc(100% - 30px);
+    .lnk_a{
+      span{display: none;}
+    }
+  }
+}
