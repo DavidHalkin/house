@@ -26,13 +26,13 @@
 				<div class="info_bar">
 					<ul class="mein_nav">
 						<li>
-							<a href="#">
+							<a data-fancybox data-src="#modal" href="javascript:;">
 								<em><i class="icon ico1"></i></em>
 								<span>Главная</span>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a data-fancybox data-src="#modal2" href="javascript:;">
 								<em><i class="icon ico2"></i></em>
 								<span>материалы</span>
 							</a>
@@ -340,6 +340,85 @@
 				</div>
 			</div>
 		</div>
+		<div style="display: none;" id="modal" class="lightbox">
+          <div class="lightbox_title">
+          	<h3 class="text-center">Заказ сметы</h3>
+          </div>
+          <div class="lightbox_content">
+          	<h4 class="text-center">Проект деревянного дома Торонто</h4>
+          	<form action="#">
+          		<div class="form-group">
+					<input type="text" class="form-control" id="f1" placeholder="Ваше имя">
+				</div>
+          		<div class="form-group">
+					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ваш email">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="f11" placeholder="Ваш телефон">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Опишите все интересующие вас вопросы"></textarea>
+				</div>
+				<div class="form-group">
+					<button class="btn btn_green btn-block">ОТПРАВИТЬ</button>
+				</div>
+          	</form>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div style="display: none;" id="modal2" class="lightbox long">
+          <div class="lightbox_title">
+          	<h3 class="text-center">Заявка на ипотеку</h3>
+          </div>
+          <div class="lightbox_content">
+			<div class="lightbox_title_etc text-center">
+				<h4>Сделайте первый шаг на пути к собственному жилью!</h4>
+				<p class="font-italic">Заполните заявку на ипотеку, и наш менеджер свяжется с Вами в ближайшее время.</p>
+			</div>
+			<ul class="cstm_list list-unstyled">
+				<li>
+					<span><em>Сумма кредита:</em></span>
+					<strong><em>300 000 рублей.</em></strong>
+				</li>
+				<li>
+					<span><em>Процентная ставка: </em></span>
+					<strong><em>от 10,0 % годовых*.</em></strong>
+				</li>
+				<li>
+					<span><em>Срок кредитования: </em></span>
+					<strong><em>до 30 лет.</em></strong>
+				</li>
+				<li>
+					<span><em>Первоначальный взнос:</em></span>
+					<strong><em>от 25%.</em></strong>
+				</li>
+			</ul>
+          	<form action="#">
+          		<div class="form-group">
+					<input type="text" class="form-control" id="f1" placeholder="Ваше имя">
+				</div>
+				<div class="form-row form-group form-row_custom">
+					<div class="col">
+						<input type="email" class="form-control" id="d2" placeholder="Ваш email">
+					</div>
+					<div class="col">
+						<input type="text" class="form-control" id="d1" placeholder="Ваш телефон">
+					</div>
+				</div>
+				<div class="form-group">
+					<button class="btn btn_green btn-block">ОТПРАВИТЬ</button>
+				</div>
+          	</form>
+          	<div class="label_box row row_custom_6 align-items-center">
+				<div class="col-5">
+					<img class="img-fluid" src="images/label.png" alt="">
+				</div>
+				<div class="col-7">
+					<p>Отправляя информацию, вы даете <a href="#">согласие</a> на обработку своих персональных данных</p>
+				</div>
+			</div>
+          </div>
+        </div>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/jquery.fancybox.min.js"></script>
