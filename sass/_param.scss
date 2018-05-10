@@ -209,3 +209,204 @@ body{
       }
     }
 }
+// light box
+.lightbox{
+  width: 100%;
+  max-width: 500px;
+  border: 3px solid #d6b168;
+  padding: 0;
+  &.long{
+    max-width: 600px;
+    .lightbox_title{
+      background:url("../images/bg_light_box_long.png") no-repeat 50% 0;
+      margin-bottom: 20px;
+    }
+    .form-group{
+      margin-bottom: 15px;
+    }
+  }
+  .lightbox_title{
+    height: 87px;
+    background:url("../images/bg_light_box.png") no-repeat 50% 0;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items:center; 
+    margin-bottom: 35px;
+    h3{
+      margin: -5px 0 0 0;
+      font:45px/45px 'MyriadPro_Semibold';
+    }
+  }
+  .label_box{
+    padding:10px 0 0 0;
+    p{
+      color: #6f6f6f;
+      font-size: 13px;
+      font-style: normal;
+      line-height: 18px;
+      padding-left: 10px;
+      a{
+        color: #35920c;
+        font-family: 'MyriadPro_Semibold';
+        text-decoration: underline;
+        &:hover{text-decoration: none;}
+      }
+    }
+  }
+  .lightbox_content{
+    padding: 0 50px 30px;
+    h4{
+      margin: 0;
+      font:20px/23px 'MyriadPro_Semibold';
+      padding-bottom: 22px;
+    }
+    button{
+      font-size: 23px;
+    }
+  }
+    @media screen and (max-width: 800px) {
+      .lightbox_content{
+        padding: 15px;
+        
+      }
+      .lightbox_title{
+        margin-bottom: 15px;
+        h3{
+          font-size: 30px;
+          line-height: 31px;
+        }
+      }
+    }
+}
+.form-group{
+  margin-bottom: 9px;
+}
+.form-control{
+  border: 2px solid #f4c33c;
+  border-radius: 1px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  padding: 16px 23px 16px;
+  box-shadow:inset 1px 1px 4px rgba(0,0,0,0.15);
+}
+.fancybox-close-small{
+  color: #fff;
+  padding: 0;
+  svg{
+    stroke-width: 2.5;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+.form-row_custom{
+  margin-left: -9px;
+  margin-right: -9px;
+  [class *= "col"]{
+    padding: 0 9px;
+    @media screen and (max-width: 400px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      + [class *= "col"] {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+.lightbox_title_etc{
+  h4{
+    font:33px/34px 'Myriad_Pro_bold' !important;
+    color: #df9b25;
+    padding-bottom: 0 !important;
+    @media screen and (max-width: 800px) {
+      font-size: 25px !important;
+      line-height: 26px !important;
+    }
+  }
+  p{
+    font-size: 16px;
+    line-height: 24px;
+    margin: 5px 0 0 0;
+    padding-bottom: 25px;
+  }
+}
+.cstm_list{
+  color: #222;
+  display: table;
+  padding: 0 15px 20px;
+  width: 100%;
+  li{
+    display: table-row;
+    width: 100%;
+    margin-bottom: 7px;
+    position: relative;
+    &:after{
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #e8e8e8;
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      z-index: 1;
+    }
+  }
+  em{
+    background: #fff;
+    font-style: normal;
+    position: relative;
+    z-index: 2;
+  }
+  span,strong{
+    display: table-cell;
+    vertical-align: bottom;
+    padding-top: 7px;
+  }
+  span{
+    font-size: 15px;
+    line-height: 18px;
+    em{
+      padding-right: 22px;
+    }
+  }
+  strong{
+    font:17px/18px 'Myriad_Pro_bold';
+    text-align: right;
+    em{
+      padding-left: 25px;
+    }
+  }
+  @media screen and (max-width:600px) {
+    padding: 0 0 10px;
+    strong,span{
+       font-size: 14px;
+      line-height: 15px;
+    }
+    strong{
+      em{
+        padding-left: 10px;
+      }
+    }
+    span{
+      em{
+        padding-right: 10px;
+      }
+    }
+  }
+  @media screen and (max-width:400px){
+    display: block;
+    li,span,strong{
+      display: block;
+      text-align: center;
+    }
+    li{
+      &:after{content: none;}
+    }
+    em{
+      padding: 0 !important;
+    }
+  }
+}
