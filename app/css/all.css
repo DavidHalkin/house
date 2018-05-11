@@ -258,11 +258,13 @@ body { background: #fff !important; }
 
 .mob_btn_menu span + span { margin-top: 11px; }
 
-.header_sidebar { background: url("../images/sidebar.png") no-repeat; -webkit-background-size: 345px 100%; background-size: 345px 100%; width: 345px; height: 100%; min-height: 100%; overflow-y: auto; position: fixed; top: 0; left: 0; z-index: 10; }
+.header_sidebar { background: url("../images/sidebar.png") no-repeat; -webkit-background-size: 345px 100%; background-size: 345px 100%; width: 345px; height: 100%; min-height: 100%; position: fixed; top: 0; left: 0; z-index: 10; }
 
 .header_sidebar:after { content: ''; width: 19px; height: 100%; position: fixed; top: 0; left: 330px; background: #000; background: -webkit-linear-gradient(left, rgba(34, 34, 34, 0.23) 0%, rgba(34, 34, 34, 0.07) 50%, rgba(34, 34, 34, 0) 100%); background: -webkit-gradient(linear, left top, right top, from(rgba(34, 34, 34, 0.23)), color-stop(50%, rgba(34, 34, 34, 0.07)), to(rgba(34, 34, 34, 0))); background: -o-linear-gradient(left, rgba(34, 34, 34, 0.23) 0%, rgba(34, 34, 34, 0.07) 50%, rgba(34, 34, 34, 0) 100%); background: linear-gradient(to right, rgba(34, 34, 34, 0.23) 0%, rgba(34, 34, 34, 0.07) 50%, rgba(34, 34, 34, 0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b222222', endColorstr='#00222222',GradientType=1 ); }
 
 @media (max-width: 1199.98px) { .header_sidebar:after { content: none; } }
+
+.header_sidebar .h_s_w { min-height: 100%; overflow-y: auto; height: 100%; position: relative; z-index: 40; }
 
 .header_sidebar .info_bar { height: auto; overflow: hidden; }
 
